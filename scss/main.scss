@@ -1,0 +1,171 @@
+// MAIN STYLES
+
+@use "colors";
+
+body {
+  background-color: colors.$background;
+  color: colors.$type;
+  font-family: "Titillium Web", sans-serif;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.1fr 0.8fr 0.1fr;
+  grid-template-rows: minmax(100px, auto);
+  height: 100%;
+}
+
+.header {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 1.5rem;
+
+  &__logo {
+    font-family: "Montserrat Alternates", sans-serif;
+    list-style: none;
+    font-size: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__listItem {
+    list-style: none;
+
+    & a {
+      text-decoration: none;
+      color: colors.$type;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 6px;
+      }
+    }
+  }
+}
+
+path {
+  transition: transform 200ms ease-in-out;
+}
+
+.topLeft:hover {
+  transform: translate(-231.9px, -274.78px);
+}
+
+.topRight:hover {
+  transform: translate(-227.9px, -274.78px);
+}
+
+.bottomLeft:hover {
+  transform: translate(-231.9px, -270.78px);
+}
+
+.bottomRight:hover {
+  transform: translate(-227.9px, -270.78px);
+}
+
+.hero {
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  &__heading {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 3rem;
+  }
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 0.4fr 0.2fr 0.4fr;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+
+  & p {
+    font-size: clamp(1rem, 1.25rem, 1.5rem);
+    transition: opacity 300ms ease;
+    opacity: 0;
+  }
+}
+
+.hero__topLeft {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hero__bottomLeft {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.svg__container {
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  grid-column: 2/3;
+  grid-row: span 3;
+}
+
+.svg__circle {
+  position: absolute;
+}
+
+.cls-1 {
+  fill: none;
+  stroke: colors.$type;
+  stroke-width: 10px;
+  transform: translate(-229.9px, -272.78px);
+
+  &:hover {
+    stroke-width: 15;
+    stroke: colors.$accent;
+  }
+}
+
+.dot__container {
+  position: relative;
+  z-index: -1;
+}
+
+.dot__outerCircle {
+  position: absolute;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  visibility: hidden;
+}
+
+.dot {
+  position: absolute;
+  fill: colors.$accent;
+}
+
+.hero__topRight {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.hero__bottomRight {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+.footer {
+  grid-column: 2/3;
+  grid-row: 3/4;
+
+  font-size: 0.8rem;
+  font-weight: 200;
+  opacity: 0.8;
+  text-align: center;
+  align-self: end;
+
+  & p {
+    margin: 0;
+  }
+}

@@ -1,0 +1,159 @@
+body {
+  background-color: #f1f1f1;
+  color: #11111f;
+  font-family: "Titillium Web", sans-serif;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.1fr 0.8fr 0.1fr;
+  grid-template-rows: minmax(100px, auto);
+  height: 100%;
+}
+
+.header {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 1.5rem;
+}
+.header__logo {
+  font-family: "Montserrat Alternates", sans-serif;
+  list-style: none;
+  font-size: 2rem;
+}
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__listItem {
+  list-style: none;
+}
+.header__listItem a {
+  text-decoration: none;
+  color: #11111f;
+  font-weight: 600;
+}
+.header__listItem a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+path {
+  transition: transform 200ms ease-in-out;
+}
+
+.topLeft:hover {
+  transform: translate(-231.9px, -274.78px);
+}
+
+.topRight:hover {
+  transform: translate(-227.9px, -274.78px);
+}
+
+.bottomLeft:hover {
+  transform: translate(-231.9px, -270.78px);
+}
+
+.bottomRight:hover {
+  transform: translate(-227.9px, -270.78px);
+}
+
+.hero {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.hero__heading {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 3rem;
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 0.4fr 0.2fr 0.4fr;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+}
+.hero__container p {
+  font-size: clamp(1rem, 1.25rem, 1.5rem);
+  transition: opacity 300ms ease;
+  opacity: 0;
+}
+
+.hero__topLeft {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hero__bottomLeft {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.svg__container {
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  grid-column: 2/3;
+  grid-row: span 3;
+}
+
+.svg__circle {
+  position: absolute;
+}
+
+.cls-1 {
+  fill: none;
+  stroke: #11111f;
+  stroke-width: 10px;
+  transform: translate(-229.9px, -272.78px);
+}
+.cls-1:hover {
+  stroke-width: 15;
+  stroke: #ff1111;
+}
+
+.dot__container {
+  position: relative;
+  z-index: -1;
+}
+
+.dot__outerCircle {
+  position: absolute;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  visibility: hidden;
+}
+
+.dot {
+  position: absolute;
+  fill: #ff1111;
+}
+
+.hero__topRight {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.hero__bottomRight {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+.footer {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  font-size: 0.8rem;
+  font-weight: 200;
+  opacity: 0.8;
+  text-align: center;
+  align-self: end;
+}
+.footer p {
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
