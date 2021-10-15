@@ -95,7 +95,6 @@ path {
 .svg__container {
   position: relative;
   align-self: center;
-  justify-self: center;
   grid-column: 2/3;
   grid-row: span 3;
 }
